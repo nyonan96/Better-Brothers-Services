@@ -1,53 +1,86 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Company Name</title>
+    <title>Better Brothers Services LLC</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="assets/logo.jpg">
 </head>
 <body>
 
     <header>
         <nav>
-            <div class="logo">Company Name</div>
+            <div class="logo">Better Brothers Services LLC</div>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="#quote">Get a Quote</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="hero">
-        <h1>Lorem ipsum dolor sit amet consectetur adipiscing elit.</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus.</p>
-        <button>Lorem ipsum dolor</button>
+    <section class="slideshow-container">
+        <div class="slide fade">
+            <p class="review-text">"The best landscaping service in town. Truly better than expected!"</p>
+            <p class="review-author">- John D.</p>
+        </div>
+        <div class="slide fade">
+            <p class="review-text">"Professional, on time, and my lawn has never looked better."</p>
+            <p class="review-author">- Sarah M.</p>
+        </div>
+        <div class="slide fade">
+            <p class="review-text">"Great attention to detail. Highly recommend the Better Brothers."</p>
+            <p class="review-author">- Mike R.</p>
+        </div>
     </section>
 
     <section class="content">
-        <h2>Lorem ipsum dolor</h2>
+        <h2>Better Than Expected</h2>
+        <p class="intro-text">Better Brothers Services LLC provides premium landscaping and outdoor maintenance. From seasonal cleanups to custom hardscaping, we ensure your property looks its absolute best.</p>
         <div class="grid">
             <div class="card">
-                <h3>Lorem</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                <h3>Lawn Care</h3>
+                <p>Mowing, edging, and fertilization to keep your grass healthy and green.</p>
             </div>
             <div class="card">
-                <h3>Lorem ipsum</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                <h3>Hardscaping</h3>
+                <p>Custom patios, walkways, and retaining walls built to last.</p>
             </div>
             <div class="card">
-                <h3>Lorem</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                <h3>Maintenance</h3>
+                <p>Seasonal cleanups, mulching, and hedge trimming for a polished look.</p>
             </div>
         </div>
     </section>
 
+    <section id="quote" class="quote-section">
+        <h2>Get a Quote</h2>
+        <div class="form-container">
+            <p>ClickUp Form Placeholder - Link Coming Soon</p>
+            </div>
+    </section>
+
     <footer>
-        <p>&copy; Footer</p>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+        </div>
+        <p>&copy; 2026 Better Brothers Services LLC</p>
     </footer>
 
-</body>
+    <script>
+        let slideIndex = 0;
+        const showSlides = () => {
+            let slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
+            slideIndex++;
+            if (slideIndex > slides.length) slideIndex = 1;
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 4000);
+        }
+        showSlides();
+    </script>
 
+</body>
 </html>
