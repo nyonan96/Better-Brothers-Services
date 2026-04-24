@@ -61,6 +61,10 @@ nav a {
     padding: 60px 5%;
     text-align: center;
     border-bottom: 1px solid #ddd;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .review-text {
@@ -96,7 +100,7 @@ h2 {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
 }
 
@@ -134,7 +138,7 @@ h2 {
 
 .image-placeholder {
     width: 100%;
-    height: 250px;
+    height: auto;
     background-color: #e0e0e0;
     display: flex;
     align-items: center;
@@ -145,17 +149,42 @@ h2 {
 
 .image-placeholder img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
+    height: auto;
+    display: block;
+    position: relative;
 }
 
 .image-placeholder span {
-    color: #888;
-    font-size: 0.9rem;
+    display: none;
+}
+
+.project-card .overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+    z-index: 2;
+}
+
+.project-card .overlay span {
+    color: var(--white);
+    font-size: 1.1rem;
     font-weight: bold;
+    letter-spacing: 1px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .overlay {
+    background: rgba(0,0,0,0.5);
+}
+
+.project-card:hover .overlay span {
+    opacity: 1;
 }
 
 .project-info {
@@ -180,13 +209,8 @@ h2 {
 }
 
 .form-container {
-    background: var(--white);
-    color: var(--text);
-    padding: 40px;
-    max-width: 600px;
     margin: 20px auto;
-    border-radius: 8px;
-    border: 2px dashed var(--accent);
+    text-align: center;
 }
 
 footer {
@@ -218,6 +242,110 @@ footer {
     animation: fadeAnim 1.5s;
 }
 
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.85);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-box {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.modal-box h3 {
+    color: var(--primary);
+    margin-top: 0;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px; right: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text);
+    background: none;
+    border: none;
+}
+
+.modal-photos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.modal-photos .photo-slot {
+    width: 100%;
+    background: #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-photos .photo-slot img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.modal-photos .photo-slot span {
+    display: none;
+}
+
+.hero {
+    background: linear-gradient(rgba(13,27,62,0.7), rgba(13,27,62,0.7)), url('assets/lawn19.JPG') center/cover no-repeat;
+    padding: 100px 5%;
+    text-align: center;
+    color: var(--white);
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin: 0 0 15px 0;
+    color: var(--white);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 0 0 30px 0;
+    color: #ddd;
+}
+
+.quote-btn {
+    display: inline-block;
+    background: var(--accent);
+    color: var(--secondary);
+    padding: 14px 32px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    transition: background 0.2s ease;
+}
+
+.quote-btn:hover {
+    background: #c9a227;
+}
 
 @keyframes fadeAnim {
     from {opacity: .4} 

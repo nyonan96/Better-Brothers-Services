@@ -22,53 +22,78 @@
 
     <main class="content">
         <h2>Our Completed Projects</h2>
-        <p class="intro-text">Take a look at some of our recent transformations. We take pride in delivering results that are "Better Than Expected."</p>
+        <p class="intro-text">Take a look at some of our recent transformations. We make it our goal to leave your yard looking better than you imagined.</p>
 
         <div class="projects-grid">
-            
-            <div class="project-card">
-                <div class="image-placeholder">
-                    <img src="project1.jpg" alt="Description of Project" onerror="this.style.display='none'">
-                    <span>Photo Coming Soon</span>
-                </div>
-                <div class="project-info">
-                    <h3>Modern Lawn Renovation</h3>
-                    <p>Complete sod installation and edging.</p>
-                </div>
-            </div>
 
-            <div class="project-card">
+            <div class="project-card" onclick="openModal('modal1')" style="cursor:pointer;">
                 <div class="image-placeholder">
-                    <img src="project2.jpg" alt="Description of Project" onerror="this.style.display='none'">
+                    <img src="assets/lawn5.JPG" alt="Lawn Care" onerror="this.style.display='none'">
                     <span>Photo Coming Soon</span>
+                    <div class="overlay"><span>View Gallery</span></div>
                 </div>
                 <div class="project-info">
-                    <h3>Custom Paver Patio</h3>
-                    <p>Designed for outdoor entertaining.</p>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="image-placeholder">
-                    <img src="project3.jpg" alt="Description of Project" onerror="this.style.display='none'">
-                    <span>Photo Coming Soon</span>
-                </div>
-                <div class="project-info">
-                    <h3>Seasonal Cleanup</h3>
-                    <p>Mulching and hedge trimming service.</p>
+                    <h3>Project Gallery</h3>
+                    <p>Before and after photos, yard maintenance, trimmings and more.</p>
                 </div>
             </div>
 
             </div>
+        <div id="modal1" class="modal-overlay" onclick="closeModal(event, 'modal1')">
+            <div class="modal-box">
+                <button class="modal-close" onclick="document.getElementById('modal1').classList.remove('active')">&times;</button>
+                <h3>Modern Lawn Renovation</h3>
+                <div class="modal-photos">
+                    <div class="photo-slot"><img src="./assets/lawn1.JPG" onerror="this.style.display='none'"><span>Photo Coming Soon</span></div>
+                    <div class="photo-slot"><img src="./assets/lawn2.jpg" onerror="this.style.display='none'"><span>Photo Coming Soon</span></div>
+                    <div class="photo-slot"><img src="./assets/lawn3.jpg" onerror="this.style.display='none'"><span>Photo Coming Soon</span></div>
+                    <div class="photo-slot"><img src="./assets/lawn4.jpg" onerror="this.style.display='none'"><span>Photo Coming Soon</span></div>
+                    <div class="photo-slot"><img src="./assets/lawn5.jpg" onerror="this.style.display='none'"><span>Photo Coming Soon</span></div>
+                    <div class="photo-slot"><img src="./assets/lawn6.jpg" onerror="this.style.display='none'"><span>Photo Coming Soon</span></div>
+                    <div class="photo-slot"><img src="./assets/lawn7.jpg" onerror="this.style.display='none'"><span>Photo Coming Soon</span></div>
+                    <div class="photo-slot"><img src="./assets/lawn8.jpg" onerror="this.style.display='none'"><span>Photo Coming Soon</span></div>
+                    <div class="photo-slot"><img src="./assets/lawn9.JPG" onerror="this.style.display='none'"><span>Photo Coming Soon</span></div>
+                    <div class="photo-slot"><img src="./assets/lawn10.jpg" onerror="this.style.display='none'"><span>Photo Coming Soon</span></div>
+                    <div class="photo-slot"><img src="./assets/lawn11.jpg" onerror="this.style.display='none'"><span>Photo Coming Soon</span></div>
+                    <div class="photo-slot"><img src="./assets/lawn12.jpg" onerror="this.style.display='none'"><span>Photo Coming Soon</span></div>
+                    <div class="photo-slot"><img src="./assets/lawn13.JPG" onerror="this.style.display='none'"><span>Photo Coming Soon</span></div>
+                    <div class="photo-slot"><img src="./assets/lawn14.jpg" onerror="this.style.display='none'"><span>Photo Coming Soon</span></div>
+                    <div class="photo-slot"><img src="./assets/lawn15.jpg" onerror="this.style.display='none'"><span>Photo Coming Soon</span></div>
+                    <div class="photo-slot"><img src="./assets/lawn16.jpg" onerror="this.style.display='none'"><span>Photo Coming Soon</span></div>
+                    <div class="photo-slot"><img src="./assets/lawn17.JPG" onerror="this.style.display='none'"><span>Photo Coming Soon</span></div>
+                    <div class="photo-slot"><img src="./assets/lawn18.jpg" onerror="this.style.display='none'"><span>Photo Coming Soon</span></div>
+                    <div class="photo-slot"><img src="./assets/lawn19.jpg" onerror="this.style.display='none'"><span>Photo Coming Soon</span></div>
+                    <div class="photo-slot"><img src="./assets/lawn20.jpg" onerror="this.style.display='none'"><span>Photo Coming Soon</span></div>
+                    <div class="photo-slot"><img src="./assets/lawn21.jpg" onerror="this.style.display='none'"><span>Photo Coming Soon</span></div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer>
         <div class="social-links">
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
+            <a href="https://www.facebook.com/p/Better-Brothers-Yard-Services-100083006125293/">Facebook</a>
         </div>
+        <p style="font-weight:bold; font-size:1.1rem;">Contact Us</p>
+        <p>
+            Office: <a href="tel:8015777746" style="color:var(--white); text-decoration:none;">801.577.7746</a><br>
+            <a href="mailto:cparrish@betterbrotherservices.com" style="color:var(--white); text-decoration:none;">cparrish@betterbrotherservices.com</a>
+        </p>
+        <p>
+            Owner: <a href="mailto:mburris@betterbrotherservices.com" style="color:var(--white); text-decoration:none;">mburris@betterbrotherservices.com</a>
+        </p>
         <p>&copy; 2026 Better Brothers Services LLC</p>
+        <p>Licensed &amp; Insured</p>
     </footer>
-
+    <script>
+        function openModal(id) {
+            document.getElementById(id).classList.add('active');
+        }
+        function closeModal(event, id) {
+            if (event.target === document.getElementById(id)) {
+                document.getElementById(id).classList.remove('active');
+            }
+        }
+    </script>
 </body>
 </html>
