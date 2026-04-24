@@ -312,7 +312,7 @@ footer {
 }
 
 .hero {
-    background: linear-gradient(rgba(13,27,62,0.7), rgba(13,27,62,0.7)), url('assets/lawn19.JPG') center/cover no-repeat;
+    background: linear-gradient(rgba(13,27,62,0.7), rgba(13,27,62,0.7)), url('assets/lawn19.jpg') center/cover no-repeat;
     padding: 100px 5%;
     text-align: center;
     color: var(--white);
